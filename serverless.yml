@@ -58,16 +58,18 @@ package:
 functions:
   hello:
     handler: bin/hello
+    description: Send Message to Discord
     events:
       - httpApi:
           path: /hello
           method: get
-  world:
-    handler: bin/world
+  bot:
+    handler: bin/bot
+    description: Handle Ping
     events:
       - httpApi:
-          path: /world
-          method: get
+          path: /
+          method: post
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
